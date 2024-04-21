@@ -45,6 +45,9 @@ class AppColors {
   static const Color softGrey = Color(0xFFF4F4F4);
   static const Color lightGrey = Color(0xFFF9F9F9);
   static const Color white = Color(0xFFFFFFFF);
+  static const Color darkBlue = Color(0xFF0F0C29);
+  static const Color mistBlue = Color(0xFF302b63);
+
 
   static Color generateRandomColor() {
     Random random = Random();

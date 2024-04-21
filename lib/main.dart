@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_website/pages/home.dart';
 import 'package:portfolio_website/theme/app_theme.dart';
+import 'package:portfolio_website/utils/custom_scroll_behaviour.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,10 +14,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: AppTheme.lightTheme,
+      title: "Priyanshu's Portfolio",
+      theme: AppTheme.darkTheme,
       darkTheme: AppTheme.darkTheme,
       debugShowCheckedModeBanner: false,
+      scrollBehavior: MyCustomScrollBehavior(),
       home: const HomePage(),
     );
   }

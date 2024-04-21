@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:entry/entry.dart';
 import 'package:flutter/material.dart';
@@ -31,19 +32,20 @@ class _Container1State extends State<Container1> {
     double w = MediaQuery.of(context).size.width;
     double h = MediaQuery.of(context).size.height;
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: w! / 10, vertical: 20),
+      margin: EdgeInsets.symmetric(horizontal: 24),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          // Container(
-          //   height: w! / 1.2,
-          //   width: w! / 1.2,
-          //   child: Lottie.asset(AppImages.main_page_anim),
-          // ),
-              GradientText('Hi! I\'m Priyanshu Verma',
+          Container(
+            height: 280,
+            width: 280,
+            child: Image.asset(AppImages.threed_illustration),
+          ),
+              GradientText('Hi!👋 I\'m Priyanshu Verma',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      fontSize: w! / 16, fontWeight: FontWeight.bold, height: 1),
+                      fontSize: w! / 12, fontWeight: FontWeight.bold, height: 1.5),
                   gradient:
                   LinearGradient(colors: [AppColors.primary, Colors.pink]))
           ,
@@ -51,18 +53,18 @@ class _Container1State extends State<Container1> {
             height: 16,
           ),
           AnimatedTextKit(animatedTexts: [
-            TyperAnimatedText("Professional Mobile App Developer", textStyle: TextStyle(color: Colors.grey.shade400, fontSize: 24),),
-            TyperAnimatedText("Professional Android App Developer", textStyle: TextStyle(color: Colors.grey.shade400, fontSize: 24),),
-            TyperAnimatedText("Professional Flutter Developer",textStyle: TextStyle(color: Colors.grey.shade400, fontSize: 24),),
-            TyperAnimatedText("Professional App UI/UX Designer", textStyle: TextStyle(color: Colors.grey.shade400, fontSize: 24),)
+            TyperAnimatedText("Professional Mobile App Developer", textStyle: TextStyle(color: Colors.grey.shade400, fontSize: 16), textAlign: TextAlign.center),
+            TyperAnimatedText("Professional Android App Developer", textStyle: TextStyle(color: Colors.grey.shade400, fontSize: 16),textAlign: TextAlign.center),
+            TyperAnimatedText("Professional Flutter Developer",textStyle: TextStyle(color: Colors.grey.shade400, fontSize: 16),textAlign: TextAlign.center),
+            TyperAnimatedText("Professional App UI/UX Designer", textStyle: TextStyle(color: Colors.grey.shade400, fontSize: 16),textAlign: TextAlign.center)
           ]),
           SizedBox(
             height: 16,
           ),
           Text(
-              "Working on this field for more than 2 years and have worked on 20+ projects.\nRecently worked as an Android Development Intern at Chatwise UK Limited",
+              "Working on this field for more than 2 years and have worked on 20+ projects. Recently worked as an Android Development Intern at Chatwise UK Limited",
               textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.grey.shade600, fontSize: 16)),
+              style: TextStyle(color: Colors.grey.shade600, fontSize: 14)),
           SizedBox(
             height: 30,
           ),
@@ -75,13 +77,12 @@ class _Container1State extends State<Container1> {
                     "Hire me",
                     style: Theme.of(context)
                         .textTheme
-                        .headlineSmall
-                        ?.copyWith(fontSize: 16),
+                        .bodyLarge,
                   ),
-                  icon: Icon(Icons.send_outlined),
+                  icon: Icon(Icons.work_outline),
                   style: ButtonStyle(
                       padding: MaterialStatePropertyAll(EdgeInsets.symmetric(
-                          horizontal: w / 24, vertical: 24)),
+                          horizontal: 28, vertical: 16)),
                       shape: MaterialStatePropertyAll(RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(100))))),
               SizedBox(
@@ -90,16 +91,15 @@ class _Container1State extends State<Container1> {
               OutlinedButton.icon(
                   onPressed: () {},
                   label: Text(
-                    "Download Resume",
+                    "Resume",
                     style: Theme.of(context)
                         .textTheme
-                        .headlineSmall
-                        ?.copyWith(fontSize: 16),
+                        .bodyLarge,
                   ),
-                  icon: Icon(Icons.download),
+                  icon: Icon(Icons.downloading_outlined),
                   style: ButtonStyle(
                       padding: MaterialStatePropertyAll(EdgeInsets.symmetric(
-                          horizontal: w / 24, vertical: 24)))),
+                          horizontal: 28, vertical: 16)))),
             ],
           ),
           SizedBox(height: 24,),
@@ -123,7 +123,7 @@ class _Container1State extends State<Container1> {
     double w = MediaQuery.of(context).size.width;
     double h = MediaQuery.of(context).size.height;
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: w! / 12, vertical: 42),
+      margin: EdgeInsets.symmetric(horizontal: w! / 12, vertical: 32),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
@@ -133,12 +133,12 @@ class _Container1State extends State<Container1> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                GradientText('Hi! \nI\'m Priyanshu Verma',
+                GradientText('Hi!👋\nI\'m Priyanshu Verma',
                     textAlign: TextAlign.start,
                     style: TextStyle(
                         fontSize: w! / 20,
                         fontWeight: FontWeight.bold,
-                        height: 1),
+                        height: 1.2),
                     gradient: LinearGradient(
                         colors: [AppColors.primary, Colors.pink])),
                 SizedBox(
@@ -172,7 +172,7 @@ class _Container1State extends State<Container1> {
                               .headlineSmall
                               ?.copyWith(fontSize: w / 92),
                         ),
-                        icon: Icon(Icons.send),
+                        icon: Icon(Icons.work_outline),
                         style: ButtonStyle(
                             padding: MaterialStatePropertyAll(
                                 EdgeInsets.symmetric(
@@ -193,7 +193,7 @@ class _Container1State extends State<Container1> {
                               .headlineSmall
                               ?.copyWith(fontSize: w / 92),
                         ),
-                        icon: Icon(Icons.download),
+                        icon: Icon(Icons.downloading_outlined),
                         style: ButtonStyle(
                             padding: MaterialStatePropertyAll(
                                 EdgeInsets.symmetric(
@@ -214,12 +214,11 @@ class _Container1State extends State<Container1> {
               ],
             ),
           )),
-          // Expanded(
-          //   child: Container(
-          //     height: 530,
-          //     child: Lottie.asset(AppImages.main_page_anim),
-          //   ),
-          // ),
+          Expanded(
+            child: Container(
+              child: Image.asset(AppImages.threed_illustration),
+            ),
+          ),
         ],
       ),
     );

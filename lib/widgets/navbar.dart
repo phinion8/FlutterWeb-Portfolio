@@ -2,9 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_website/utils/app_images.dart';
 import 'package:portfolio_website/utils/text_themes.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 class NavBar extends StatefulWidget {
-  const NavBar({super.key});
+  const NavBar({super.key, required this.scaffoldKey, required this.itemScrollController});
+
+  final GlobalKey<ScaffoldState> scaffoldKey;
+  final ItemScrollController itemScrollController;
 
   @override
   State<NavBar> createState() => _NavBarState();
@@ -24,24 +28,30 @@ class _NavBarState extends State<NavBar> {
       margin: EdgeInsets.symmetric(horizontal: 20),
       height: 70,
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          InkWell(onTap: () {}, child: Icon(Icons.menu)),
+          Row(
+            children: [
+              Image(
+                image: AssetImage(AppImages.logo),
+                height: 32,
+                width: 32,
+              ),
+              SizedBox(
+                width: 8,
+              ),
+              Text(
+                "Priyanshu's Portfolio",
+                style: Theme.of(context).textTheme.headlineSmall,
+              ),
+            ],
+          ),
           SizedBox(
             width: 16,
           ),
-          Image(
-            image: AssetImage(AppImages.logo),
-            height: 32,
-            width: 32,
-          ),
-          SizedBox(
-            width: 8,
-          ),
-          Text(
-            "Priyanshu's Portfolio",
-            style: Theme.of(context).textTheme.headlineSmall,
-          )
+          InkWell(onTap: () {
+            widget.scaffoldKey.currentState!.openDrawer();
+          }, child: Icon(Icons.menu)),
         ],
       ),
     );
@@ -49,7 +59,7 @@ class _NavBarState extends State<NavBar> {
 
   Widget DesktopNavBar() {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+      margin: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
       height: 70,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -74,7 +84,12 @@ class _NavBarState extends State<NavBar> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    widget.itemScrollController.scrollTo(
+                        index: 1,
+                        duration: Duration(seconds: 2),
+                        curve: Curves.easeInOutCubic);
+                  },
                   child: Text(
                     "Home",
                     style: Theme.of(context).textTheme.bodyMedium,
@@ -83,16 +98,12 @@ class _NavBarState extends State<NavBar> {
                 width: 24,
               ),
               TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    "About",
-                    style: Theme.of(context).textTheme.bodyMedium,
-                  )),
-              SizedBox(
-                width: 24,
-              ),
-              TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    widget.itemScrollController.scrollTo(
+                        index: 2,
+                        duration: Duration(seconds: 2),
+                        curve: Curves.easeInOutCubic);
+                  },
                   child: Text(
                     "Experience",
                     style: Theme.of(context).textTheme.bodyMedium,
@@ -101,7 +112,26 @@ class _NavBarState extends State<NavBar> {
                 width: 24,
               ),
               TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    widget.itemScrollController.scrollTo(
+                        index: 3,
+                        duration: Duration(seconds: 2),
+                        curve: Curves.easeInOutCubic);
+                  },
+                  child: Text(
+                    "Skills",
+                    style: Theme.of(context).textTheme.bodyMedium,
+                  )),
+              SizedBox(
+                width: 24,
+              ),
+              TextButton(
+                  onPressed: () {
+                    widget.itemScrollController.scrollTo(
+                        index: 4,
+                        duration: Duration(seconds: 2),
+                        curve: Curves.easeInOutCubic);
+                  },
                   child: Text(
                     "Portfolio",
                     style: Theme.of(context).textTheme.bodyMedium,
@@ -109,7 +139,12 @@ class _NavBarState extends State<NavBar> {
             ],
           ),
           OutlinedButton(
-            onPressed: () {},
+            onPressed: () {
+              widget.itemScrollController.scrollTo(
+                  index: 5,
+                  duration: Duration(seconds: 2),
+                  curve: Curves.easeInOutCubic);
+            },
             child: Text(
               "Contact Me",
               style: Theme.of(context).textTheme.bodyLarge,

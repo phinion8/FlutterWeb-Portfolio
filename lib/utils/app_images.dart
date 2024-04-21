@@ -20,6 +20,23 @@ class AppImages{
   static const String node_js_logo = "assets/images/node_logo.png";
   static const String firebase_logo = "assets/images/firebase_logo.png";
   static const String dashboard = "assets/images/dashboard.png";
+  static const String myProfilePic = "assets/images/my_photo.jpeg";
+  static const String contact_anim = "assets/animations/contact_anim.json";
+  static const String threed_illustration = "assets/images/3d_illustration.png";
+  static const String contact_illustration = "assets/images/contact_illustration.svg";
+  static const String briefcase_img = "assets/images/briefcase.png";
+  static const String computer_img = "assets/images/3d_computer.png";
+  static const String fiverr_img = "assets/images/fiverr.png";
+  static const String desi_art_room = "assets/images/desi_art_room_pic.jpg";
+  static const String academy = "assets/images/academy.png";
+  static const String chatwise = "assets/images/chatwise.png";
+  static const String jetpack_compose = "assets/images/jetpack_compose.png";
+  static const String socio_live_preview = "assets/images/socio_live_preview_img.png";
+  static const String expenses_tracker_preview = "assets/images/expense_manager_preview.png";
+  static const String krishak_seva_preview = "assets/images/krishak_seva_preview.png";
+  static const String daily_jounral_preview = "assets/images/daily_jounral_preview.png";
+  static const String rewards_app_preview = "assets/images/rewards_app_preview.png";
+  static const String ecommerce_app_preview = "assets/images/java_ecommerce_app_preview.png";
 
 
 }

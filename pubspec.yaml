@@ -41,6 +41,13 @@ dependencies:
   lottie: ^2.7.0
   typing_animation: ^0.0.1
   animated_text_kit: ^4.2.2
+  social_media_buttons: ^1.0.0
+  flutter_svg: ^2.0.9
+  animate_do: ^3.2.0
+  scrollable_positioned_list: ^0.3.8
+  carousel_slider: ^4.2.1
+  get: ^4.6.5
+  get_storage: ^2.1.1
 
 
 dev_dependencies:

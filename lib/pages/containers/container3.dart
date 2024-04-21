@@ -62,8 +62,8 @@ class Container3 extends StatelessWidget {
                   techStackLogoPath: AppImages.dart_logo,
                   techStackTitle: "Dart"),
               TechStackWidgetMobile(
-                  techStackLogoPath: AppImages.java_logo,
-                  techStackTitle: "Java"),
+                  techStackLogoPath: AppImages.jetpack_compose,
+                  techStackTitle: "Jetpack\nCompose"),
               TechStackWidgetMobile(
                   techStackLogoPath: AppImages.firebase_logo,
                   techStackTitle: "Firebase"),
@@ -112,6 +112,9 @@ class Container3 extends StatelessWidget {
               TechStackWidgetMobile(
                   techStackLogoPath: AppImages.mongo_db_logo,
                   techStackTitle: "MongoDB"),
+              TechStackWidgetMobile(
+                  techStackLogoPath: AppImages.java_logo,
+                  techStackTitle: "Java"),
             ],
           )
         ],
@@ -161,6 +164,10 @@ class Container3 extends StatelessWidget {
                   w: w,
                   techStackLogoPath: AppImages.dart_logo,
                   techStackTitle: "Dart"),
+              TechStackWidgetDesktop(
+                  w: w,
+                  techStackLogoPath: AppImages.jetpack_compose,
+                  techStackTitle: "jetpack\nCompose"),
               TechStackWidgetDesktop(
                   w: w,
                   techStackLogoPath: AppImages.java_logo,
